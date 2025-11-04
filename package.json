@@ -1,0 +1,61 @@
+{
+  "name": "webpack-shadcn-template",
+  "productName": "webpack-shadcn-template",
+  "version": "1.0.0",
+  "description": "My Electron application description",
+  "main": ".webpack/main",
+  "scripts": {
+    "taze": "npx taze latest -w  -I -x @electron/fuses",
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "bundle": "electron-forge make --no-package",
+    "publish": "electron-forge publish",
+    "lint": "eslint --ext .ts,.tsx src",
+    "fix": "biome check --fix",
+    "type-check": "tsc --noEmit",
+    "migrate": "biome migrate eslint --write",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": {
+    "name": "SuperWindCloud",
+    "email": "19338823723@163.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@electron-forge/cli": "^7.10.2",
+    "@electron-forge/maker-deb": "^7.10.2",
+    "@electron-forge/maker-rpm": "^7.10.2",
+    "@electron-forge/maker-squirrel": "^7.10.2",
+    "@electron-forge/maker-zip": "^7.10.2",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.10.2",
+    "@electron-forge/plugin-fuses": "^7.10.2",
+    "@electron-forge/plugin-webpack": "^7.10.2",
+    "@electron/fuses": "^1.8.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "@vercel/webpack-asset-relocator-loader": "^1.10.0",
+    "css-loader": "^7.1.2",
+    "electron": "39.0.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-import": "^2.32.0",
+    "fork-ts-checker-webpack-plugin": "^9.1.0",
+    "husky": "^9.1.7",
+    "node-loader": "^2.1.0",
+    "style-loader": "^4.0.0",
+    "ts-loader": "^9.5.4",
+    "tsx": "^4.20.6",
+    "typescript": "~5.9.3"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.67.0",
+    "electron-squirrel-startup": "^1.0.1",
+    "next-themes": "^0.4.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zustand": "^4.5.5"
+  }
+}
