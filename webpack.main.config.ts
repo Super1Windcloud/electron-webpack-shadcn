@@ -1,5 +1,4 @@
 import type { Configuration } from "webpack";
-import { plugins } from "./webpack.plugins";
 import { mainProcessRules } from "./webpack.rules";
 import { aliases } from "./webpack.aliases";
 
@@ -13,9 +12,10 @@ export const mainConfig: Configuration = {
 	module: {
 		rules: mainProcessRules,
 	},
-	plugins,
 	resolve: {
 		extensions: [".js", ".ts", ".jsx", ".tsx", ".css", ".json"],
 		alias: aliases,
+		
 	},
+	
 };

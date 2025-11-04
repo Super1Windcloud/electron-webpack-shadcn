@@ -3,7 +3,11 @@ import { createRoot } from "react-dom/client";
 import { ThemeProvider } from "next-themes";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { I18nextProvider } from "react-i18next";
-import { RouterProvider, createRouter } from "@tanstack/react-router";
+import {
+	RouterProvider,
+	createRouter,
+	createHashHistory,
+} from "@tanstack/react-router";
 
 import "./index.css";
 import i18n from "./i18n";
@@ -14,6 +18,11 @@ type DesktopBridge = {
 		electron: string;
 		chrome: string;
 		node: string;
+	};
+	window: {
+		minimize: () => Promise<void>;
+		toggleMaximize: () => Promise<void>;
+		close: () => Promise<void>;
 	};
 };
 
@@ -26,13 +35,14 @@ declare global {
 const queryClient = new QueryClient();
 
 const router = createRouter({
+	history: createHashHistory(),
 	routeTree,
 	context: { queryClient },
 	defaultPreload: "intent",
 });
 
 declare module "@tanstack/react-router" {
-	// eslint-disable-next-line @typescript-eslint/no-empty-interface
+	 
 	interface Register {
 		router: typeof router;
 	}

@@ -9,10 +9,16 @@ export const ThemeToggle: React.FC = () => {
 	return (
 		<button
 			type="button"
-			className="theme-toggle"
+			className="inline-flex items-center gap-2 rounded-full border border-border/60 bg-card/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground shadow-sm transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
 			onClick={() => setTheme(isDark ? "light" : "dark")}
 		>
-			<span aria-hidden>{isDark ? "🌙" : "☀️"}</span>
+			<span
+				aria-hidden
+				className="text-base leading-none"
+				role="presentation"
+			>
+				{isDark ? "🌙" : "☀️"}
+			</span>
 			<span>{isDark ? "深色模式" : "浅色模式"}</span>
 		</button>
 	);

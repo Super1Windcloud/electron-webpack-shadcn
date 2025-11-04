@@ -34,6 +34,8 @@ const config: ForgeConfig = {
 	plugins: [
 		new AutoUnpackNativesPlugin({}),
 		new WebpackPlugin({
+			devContentSecurityPolicy:
+				"default-src 'self'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self' ws://localhost:* http://localhost:*;",
 			mainConfig,
 
 			renderer: {
