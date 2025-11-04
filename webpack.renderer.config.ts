@@ -1,6 +1,7 @@
 import type { Configuration } from "webpack";
 import { plugins } from "./webpack.plugins";
 import { rendererProcessRules } from "./webpack.rules";
+import { aliases } from "./webpack.aliases";
 
 const rules = [
 	...rendererProcessRules,
@@ -17,5 +18,6 @@ export const rendererConfig: Configuration = {
 	plugins,
 	resolve: {
 		extensions: [".js", ".ts", ".jsx", ".tsx", ".css"],
+		alias: aliases,
 	},
 };

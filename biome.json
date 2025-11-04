@@ -6,7 +6,12 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"includes": ["src"],
+		"includes": [
+			"src",
+			"electron-forge-maker-nsis",
+			"!!out",
+			"!!src/components/ui"
+		],
 		"ignoreUnknown": false
 	},
 	"formatter": {
