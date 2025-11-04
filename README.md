@@ -2,7 +2,9 @@
 
 Modern Electron + React desktop starter powered by Electron Forge, Webpack, shadcn/ui, and the latest TypeScript toolchain.
 
-#[!img](./image.png)
+
+![img](./image.png)
+
 ---
 ## 🧱 Tech Stack
 - **Electron 39 + Forge**: multi-platform packaging with NSIS, deb, rpm, and zip makers configured in `forge.config.ts`.
