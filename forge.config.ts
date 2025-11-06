@@ -6,7 +6,7 @@ import { AutoUnpackNativesPlugin } from "@electron-forge/plugin-auto-unpack-nati
 import { FusesPlugin } from "@electron-forge/plugin-fuses";
 import { WebpackPlugin } from "@electron-forge/plugin-webpack";
 import type { ForgeConfig } from "@electron-forge/shared-types";
-import MakerNSIS from "./electron-forge-maker-nsis";
+import  MakerNSIS from "electron-forge-make-nsis";
 import { mainConfig } from "./webpack.main.config";
 import preloadConfig from "./webpack.preload.config";
 import { rendererConfig } from "./webpack.renderer.config";
@@ -17,6 +17,7 @@ const config: ForgeConfig = {
 	},
 	rebuildConfig: {},
 	makers: [
+	 
 		new MakerNSIS({
 			getAppBuilderConfig: async () => ({
 				nsis: {
